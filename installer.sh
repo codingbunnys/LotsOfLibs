@@ -5,15 +5,15 @@ if [[ -f "${HOME}/.klsh/.klshcore" ]]; then
 fi
 mkdir lotsoflibs
 cd lotsoflibs
-echo "$hidden"
+echo -e "$hidden"
 wget https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/build.sh --quiet
-echo "$resetall"
+echo -e "$resetall"
 if [[ $? == 127 ]]; then
-	echo "${red}Installing Libraries. Please enter your password..."
+	echo -e "${red}Installing Libraries. Please enter your password..."
 	sudo apt install wget
 	wget https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/build.sh --quiet
 fi
-echo "Downloading Project Files"
+echo -e "Downloading Project Files"
 function ifthereremove {
 	if [[ -f $PWD/$1 ]]; then
 		rm $1
@@ -22,20 +22,20 @@ function ifthereremove {
 ifthereremove build.sh
 ifthereremove css.list
 ifthereremove js.list
-echo "Downloading \"build.sh\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/build.sh"
+echo -e "Downloading \"build.sh\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/build.sh"
 wget https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/build.sh --quiet
-echo "Finished downloading \"build.sh\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/build.sh"
-echo "Downloading \"css.list\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/css.list"
+echo -e "Finished downloading \"build.sh\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/build.sh"
+echo -e "Downloading \"css.list\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/css.list"
 wget https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/css.list --quiet
-echo "Finished downloading \"css.list\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/css.list"
-echo "Downloading \"js.list\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/js.list"
+echo -e "Finished downloading \"css.list\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/css.list"
+echo -e "Downloading \"js.list\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/js.list"
 wget https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/js.list --quiet
-echo "Finished downloading \"js.list\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/js.list"
-echo ""
-echo "Making Project Files Executable"
+echo -e "Finished downloading \"js.list\" from https://raw.githubusercontent.com/codingbunnys/LotsOfLibs/master/js.list"
+echo -e ""
+echo -e "Making Project Files Executable"
 chmod 755 ~/lotsoflibs/*
-echo "Done making Project Files Executable"
-echo ""
-echo "Registering Command \"LotsOfLibs\""
-echo "function LotsOfLibs { ~/lotsoflibs/build.sh; }" >> ~/.bashrc
-echo "Finished Registering Command \"LotsOfLibs\". Please run \"source \~/.bashrc\" to be able to run the command!"
+echo -e "Done making Project Files Executable"
+echo -e ""
+echo -e "Registering Command \"LotsOfLibs\""
+echo -e "function LotsOfLibs { ~/lotsoflibs/build.sh; }" >> ~/.bashrc
+echo -e "Finished Registering Command \"LotsOfLibs\". Please run \"source \~/.bashrc\" to be able to run the command!"
