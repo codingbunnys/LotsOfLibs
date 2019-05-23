@@ -38,4 +38,4 @@ echo -e "Done making Project Files Executable"
 echo -e ""
 echo -e "Registering Command \"LotsOfLibs\""
 echo -e "function LotsOfLibs { ~/lotsoflibs/build.sh; }" >> ~/.bashrc
-echo -e "Finished Registering Command \"LotsOfLibs\". Please run \"source \~/.bashrc\" to be able to run the command!"
+echo -e "Finished Registering Command \"LotsOfLibs\". Please run \"source ~/.bashrc\" to be able to run the command!"
