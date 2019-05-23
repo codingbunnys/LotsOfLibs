@@ -41,7 +41,7 @@ function js {
     echo -e "<!-- $y   SOURCE: $line -->\n<script>" >> ../lotsoflibs.html
     cat ./$y  >> ../lotsoflibs.html
     echo "</script>" >> ../lotsoflibs.html
-    echo "${green}Added ${red}$y ${green}to ${red}lotsoflibs.html"
+    echo -e "${green}Added ${red}$y ${green}to ${red}lotsoflibs.html"
     ((i++))
   done <<< "$x"
   cd ..
